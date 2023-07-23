@@ -1,5 +1,4 @@
 import { useContext, createContext, useState } from "react";
-import datifake from "./datiFake";
 
 const AppContest = createContext(null);
 
@@ -14,13 +13,23 @@ function ContextProvider({ children }) {
   function inviaRichiesta() {
     console.log("inviaRichiesta: " + input);
     async function richiedi() {
-      let risp = await fetch(
-        "https://geo.ipify.org/api/v2/country,city?apiKey=at_Lt7TT3hCYlndsk3dpvc9AyQqsCalx&ipAddress=" +
-          input
-      );
-      let obj = await risp.json();
-      setDati(obj);
+      try {
+        let risp = await fetch(
+          "https://geo.ipify.org/api/v2/country,city?apiKey=at_Lt7TT3hCYlndsk3dpvc9AyQqsCalx&ipAddress=" +
+            input
+        );
+        let obj = await risp.json();
+
+        if (obj.stuats !== 200) {
+          throw new Error("errorreeeeeee");
+        } else {
+          setDati(obj);
+        }
+      } catch (error) {
+        console.log(error);
+      }
     }
+
     richiedi();
   }
 

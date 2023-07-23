@@ -7,7 +7,7 @@ import { useMyContext } from "../context";
 
 function MapBox() {
   const { dati } = useMyContext();
-  console.log(dati.location.city);
+  console.log(dati.location);
 
   const marker = {
     geocode: [dati.location.lat, dati.location.lng],
@@ -22,7 +22,7 @@ function MapBox() {
 
   return (
     <div className={style.containerMain}>
-      <MapContainer center={position} zoom={13}>
+      <MapContainer key={"mapkey" + dati.ip} center={position} zoom={13}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"

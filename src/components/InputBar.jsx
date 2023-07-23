@@ -4,7 +4,8 @@ import style from "../assets/css/InputBar.module.css";
 import { useMyContext } from "../context";
 
 function InputBar() {
-  const { input, dati, handlerInput, inviaRichiesta } = useMyContext();
+  const { input, dati, handlerInput, inviaRichiesta, map, setMap } =
+    useMyContext();
 
   return (
     <div className={style.containerInput}>
