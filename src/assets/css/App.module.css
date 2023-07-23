@@ -1,0 +1,43 @@
+
+.topContainer {
+height: 32vh;
+
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+background-image: url('../img/pattern-bg-desktop.png');
+background-position: center center;
+background-size: cover;
+background-repeat: no-repeat;
+padding-top: 4vh;
+}
+.topContainer h1 {
+    font-size: 43px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 4vh;
+}
+
+.bottomContainer {
+    height: 68vh;
+   
+}
+
+@media only screen and (max-width: 900px){
+    .topContainer {
+        height: 35vh;
+        background-image: url('../img/pattern-bg-mobile.png');
+        padding-top: 4vh;
+        }
+        .bottomContainer {
+            height: 65vh;
+           
+        }
+        .topContainer h1 {
+            font-size: 30px;
+         
+            margin-bottom: 4vh;
+        }
+        
+}

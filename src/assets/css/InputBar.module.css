@@ -1,0 +1,46 @@
+.containerInput {
+width: 100%;
+max-width: 640px;
+min-height: 57px;
+
+padding: 0 40px;
+display: flex;
+margin-bottom: 5vh;
+}
+.containerInput input {
+    width: calc(100% - 60px);
+    border-radius: 15px 0 0 15px;
+    border: 0px solid #fff;
+    background-color: #fff;
+    outline: 1px solid #fff;
+    font-size: 18px;
+    padding: 0px 20px;
+    color: #5a5a5a;
+}
+.containerInput input:focus {
+   
+    outline: 1px solid #000;
+  
+}
+.containerInput button{
+    width: 60px;
+    border-radius:0 15px 15px 0;
+    border: 0px solid #fff;
+    background-color: #000;
+    outline: 1px solid #000;
+    cursor: pointer;
+}
+.containerInput button img{
+    
+}
+@media only screen and (max-width: 900px){
+    .containerInput {
+        padding: 0 20px;
+        margin-bottom: 3vh;
+        }
+        .containerInput input {
+           
+            font-size: 17px;
+           
+        }
+}
