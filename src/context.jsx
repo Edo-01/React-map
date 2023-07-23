@@ -19,8 +19,8 @@ function ContextProvider({ children }) {
             input
         );
         let obj = await risp.json();
-
-        if (obj.stuats !== 200) {
+        console.log(risp);
+        if (risp.ok === false) {
           throw new Error("errorreeeeeee");
         } else {
           setDati(obj);
