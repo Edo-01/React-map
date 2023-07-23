@@ -1,5 +1,4 @@
 import { useContext, createContext, useState } from "react";
-import datifake from "./datiFake";
 
 const AppContest = createContext(null);
 
